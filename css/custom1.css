@@ -1,0 +1,83 @@
+SPAN.b { color:black; background-color:#DBEDFD; }
+SPAN.i { color:black; background-color:#DBEDFD; }
+SPAN.g { color:black; background-color:#C3FDEC; }
+SPAN.y { color:black; background-color:#FFFF66; }
+SPAN.small   { font-size: 9px; font-weight: bold; text-align:center; color: #FF4422; }
+SPAN.medium  { font-size: 12px; font-weight: bold; text-align:center; color: #FF4422; }
+
+P {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; text-align: justify }
+UL {  list-style-image:  url(../it/images/yel_sphere.gif); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px}
+H3 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color: #006600; text-align: center; font-size: 16px}
+H4 { font-family: Verdana, Arial, Helvetica, sans-serif; color: #339900; font-size: 12px}
+TD { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px}
+TH {	color: #FFFFFF; background-color: #FF6600; }
+
+.nero            { color=#000000 }
+.bianco          { color=#222244 }
+.verde           { color=#00FF00 }
+.rosso           { color=#FF0000 }
+.blu             { color=#1020EE }
+.left            { text-align:left }
+.right           { text-align:right }
+.center          { text-align:center }
+.smallblack      { font: bold; font-size: 9px; color: #101010; }
+.smallwhite      { font-size: 9px; font-weight: bold; text-align:center; color: #FFFFFF; }
+.mediumblack     { font-size: 12px; font-weight: bold; text-align:center; color: #222222; }
+.mediumwhite     { font-size: 12px; font-weight: bold; text-align:center; color: #FFFFFF; }
+.bigblack        { font-size: 14px; font-weight: bold; text-align:center; color: #222222; }
+.bigwhite        { font-size: 14px; font-weight: bold; text-align:center; color: #FFFFFF; }
+
+BODY { color: black; font-size: 12px; font-family: Verdana,Arial,Helvetica; font-style: normal; font-weight: normal; scrollbar-arrow-color: #FFFFFF; scrollbar-shadow-color: #CCCCCC; scrollbar-face-color: #EAEAEA; scrollbar-darkshadow-color: #4A4A4A; scrollbar-track-color: #FFFFFF; scrollbar-3dlight-color: #CCCCCC; scrollbar-highlight-color: #000000; text-align: center; }
+
+FONT { font-size: 12px; text-align:center; }
+
+P { font-size: 10px; font-weight: bold; color: #222222; }
+
+DIV.d1       { font-size: 10px; text-align: center; }
+
+TABLE { font-size: 14px; }
+TABLE.t { font-size: 8px; text-align:center; border-right: #000080 0px solid; border-top: #000080 0px solid; border-left: #000080 0px solid; border-bottom: #000080 0px solid; }
+
+TR { font-size: 12px; text-align:center; border-right: #000080 0px solid; border-top: #000080 0px solid; border-left: #000080 0px solid; border-bottom: #000080 0px solid; }
+TD { font-size: 12px; text-align:center; background-color: #FAFAFA; border-right: #808080 1px solid; border-top: #808080 1px solid; border-left: #808080 1px solid; border-bottom: #808080 1px solid; }
+
+TD.green { font-size: 12px; background-color: #22FF22; color: #000000; text-align : center; vertical-align : middle; border-right: #D6D4D2 1px dotted; border-top: #D6D4D2 1px dotted; border-left: #D6D4D2 1px dotted; border-bottom: #D6D4D2 1px dotted; }
+TD.red { font-size: 12px; background-color: #FF8888; color: #000000; text-align : center; vertical-align : middle; border-right: #D6D4D2 1px dotted; border-top: #D6D4D2 1px dotted; border-left: #D6D4D2 1px dotted; border-bottom: #D6D4D2 1px dotted; }
+TD.lightblue { font-size: 12px; background-color: #DDDDFF; color: #000000; text-align : center; vertical-align : middle; border-right: #BBCCFF 1px dotted; border-top: #BBCCFF 1px dotted; border-left: #BBCCFF 1px dotted; border-bottom: #BBCCFF 1px dotted; }
+TD.lightgrey { font-size: 14px; background-color: #EAEAEA; color: #000000; text-align : center; vertical-align : middle; border-right: #888888 1px dotted; border-top: #888888 1px dotted; border-left: #888888 1px dotted; border-bottom: #888888 1px dotted; }
+TD.lightwhite { font-size: 10px; background-color: #FEFEFE; color: #000000; text-align : center; vertical-align : middle; border-right: #AAAAAA 1px dotted; border-top: #AAAAAA 1px dotted; border-left: #AAAAAA 1px dotted; border-bottom: #AAAAAA 1px dotted; }
+TD.lightwhite1 { font-size: 10px; background-color: #FEFEFE; color: #000000; text-align : center; vertical-align : middle; border-right: #AAAAAA 1px dotted; border-top: #AAAAAA 1px dotted; border-left: #AAAAAA 1px dotted; border-bottom: #AAAAAA 1px dotted; }
+TD.lightwhite2 { font-size: 10px; background-color: #F4F4F4; color: #000000; text-align : center; vertical-align : middle; border-right: #BBBBBB 1px dotted; border-top: #BBBBBB 1px dotted; border-left: #BBBBBB 1px dotted; border-bottom: #BBBBBB 1px dotted; }
+
+A:hover    { font-size: 12px; font-family: Verdana,Arial,Helvetica; background-color: #EEEEEE; font-weight: bold; color: #8888FF; text-decoration: underline }
+A:link     { font-size: 12px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #2222FF; text-decoration: underline }
+A:visited  { font-size: 12px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #4444FF; text-decoration: underline }
+
+A.bigblue:hover    { font-size: 14px; font-family: Verdana,Arial,Helvetica; background-color: #EEEEEE; font-weight: bold;  color: #8888FF; text-decoration: underline }
+A.bigblue:link     { font-size: 14px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #2222FF; text-decoration: underline }
+A.bigblue:visited  { font-size: 14px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #4444FF; text-decoration: underline }
+
+A.bigred:hover    { font-size: 14px; font-family: Verdana,Arial,Helvetica; background-color: #EEEEEE; font-weight: bold; color: #FF8888; text-decoration: underline }
+A.bigred:link     { font-size: 14px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #FF2222; text-decoration: underline }
+A.bigred:visited  { font-size: 14px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #FF4444; text-decoration: underline }
+
+A.small:hover      { font-size: 9px; font-family: Verdana,Arial,Helvetica; background-color: #EEEEEE; font-weight: bold; color: #FF8888; text-decoration: underline }
+A.small:link       { font-size: 9px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #2222FF; text-decoration: underline }
+A.small:visited    { font-size: 9px; font-family: Verdana,Arial,Helvetica; font-weight: bold; color: #4444FF; text-decoration: underline }
+
+A.medium:hover     { font-size: 10px; font-family: Verdana,Arial,Helvetica; background-color: #EEEEEE; font-style: normal; font-weight: bold; color: #8888FF; text-decoration: underline }
+A.medium:link      { font-size: 10px; font-family: Verdana,Arial,Helvetica; font-style: normal; font-weight: bold; color: #2222FF; text-decoration: underline }
+A.medium:visited   { font-size: 10px; font-family: Verdana,Arial,Helvetica; font-style: normal; font-weight: bold; color: #4444FF; text-decoration: underline }
+
+A.smallest:hover   { font-size: 9px; font-family: Verdana,Arial,Helvetica; background-color: #EEEEEE; font-weight: normal; color: #8888FF; text-decoration: underline }
+A.smallest:link    { font-size: 9px; font-family: Verdana,Arial,Helvetica; font-weight: normal; color: #2222FF; text-decoration: underline }
+A.smallest:visited { font-size: 9px; font-family: Verdana,Arial,Helvetica; font-weight: normal; color: #4444FF; text-decoration: underline }
+
+IMG { background-color: #FAFAFA; text-align:center; color: #000000; border-right: #FFFFFF 0px solid; border-top: #FFFFFF 0px solid; border-left: #FFFFFF 0px solid; border-bottom: #FFFFFF 0px solid; }
+
+INPUT.text        { border-width: 1; font-size: 12px; border-color:#AAAAAA; background-color: #FFFFFF; height: 18px font: bold; font-family: Verdana; font-size: 7pt; color: #222222; }
+INPUT.checkbox    { border-width: 1; background-color: #EEEEEE; color: #222222; }	
+INPUT.radio       { border-width: 1; background-color: #EEEEEE; color: #222222; }
+INPUT.button      { border-width: 1; font-size: 12px; background-color: #EEEEEE; height: 20px font: bold; font-family: Verdana; font-size: 9pt; color: #222222; }
+TEXTAREA.textarea { border-width: 1; border: ridge 0px; border-width: 1; border-color:#2E166A; background-color:  #FAFAFA; font: bold; font-family: Verdana; font-size: 7pt; color: #222222; }
+SELECT.select     { border-width: 1; font-size: 12px; background-color: #FFFFFF; height: 18px font: bold; font-family: Verdana; font-size: 7pt; color: #222222; }

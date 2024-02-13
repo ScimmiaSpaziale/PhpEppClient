@@ -1,0 +1,243 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1040{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fnil\fcharset0 Courier New;}{\f2\fswiss\fprq2\fcharset0 Arial;}}
+{\*\generator Msftedit 5.41.15.1515;}\viewkind4\uc1\pard\qc\b\f0\fs20\par
+\fs32\par
+\par
+Guida Rapida API 9Euro.com / GloboSpace.com - 9EURO-REG\par
+\par
+\par
+\b0\fs20 Versione Guida API v0.1\par
+\par
+\pard\par
+\par
+\b\fs28 Introduzione alla Configurazione Iniziale\b0\fs20\par
+\par
+Per utilizzare le API, bisogna innanzitutto dal pannello di configurazione generale del sito globospace.com, impostare i propri parametri di autorizzazione, e le pagine di ritorno.\par
+\par
+Parametri da impostare nel pannello \b globospace.com:\b0\par
+\par
+1) Sito Web Dove si utilizzeranno le API, ex: \b http://<proprio sito web>\par
+\b0 2) Indirizzo IP associato al proprio sito web: \b XX.XX.XX.XX\par
+\b0 3) Indirizzo di ritorno chiamata con successo: \b http://<proprio sito web>/operation_success.php\b0\par
+4) Indirizzo di ritorno chiamata fallita: \b http://<proprio sito web>/operation_failed.php\par
+\par
+\b0 Parametri da impostare per semplificare alcune operazioni:\par
+\par
+5) Contatto Tecnico di Default: \b <IDTECH>\par
+\b0 6) Name Server 1 di Default: \b <NS1>\par
+\b0 7) Name Server 1 di Default: \b <NS2>\par
+\b0\par
+Ad ogni chiamata di una pagina, il sistema verificher\'e0 che l'utente \'e8 abilitato come utilizzatore delle API, che l'utente ha il credito per effettuare l'operazione e che l'hostname di provenienza e l'ip dello stesso corrispondano a quelli dichiarati dall'utilizzatore delle API, in caso di mancato credito, o incongruenza con i parametri forniti nel pannello \b globospace.com, \b0 l'operazione di chiamata fallir\'e0 e non verr\'e0 autorizzata dal sistema.\par
+\par
+\b\fs28 Risultato di Operazione compiuta con Successo\b0\fs20\par
+\par
+In caso che l'operazione chiamata abbia successo, al termine della chiamata, si verr\'e0 rediretti sulla propria pagina:\par
+\b http://<proprio sito web>/operation_success.php\par
+\par
+\b0 Con i seguenti parametri:\b  \par
+- OpCode=Codice\par
+\b0 - \b ResultCode=Codice\par
+- Message=Messaggio Addizionale\b0\par
+\b\par
+\b0 Esempio:\b\par
+\par
+http://<proprio sito web>/operation_success.php?OpCode=1&ResultCode=1000\par
+\par
+\b0 L'OpCode vi permetter\'e0 di identificare il tipo di operazione richiesta ed \'e8 un codice identificativo proprio delle \b API 9EURO-REG\b0  che vi offriamo, Message corrisponder\'e0 ad un messaggio addizionale collegato al tipo di operazione, mentre ResultCode corrisponder\'e0 al codice di risposta del server \b EPP del Nic\b0 .\par
+\par
+\b\fs28 Risultato di Operazione Fallita\fs20\par
+\par
+\b0 In caso di insuccesso per l'operazione richiamata, al termine del tentativo, si verr\'e0 redirett sulla propria pagina:\b\par
+http://<proprio sito web>/operation_failed.php\par
+\par
+\b0 Con i seguenti parametri:\par
+- \b OpCode=Codice\b0\par
+- \b ResultCode=Codice\b0\par
+- \b ReasonCode=Codice\par
+\par
+\b0 L'OpCode vi permetter\'e0 di identificare il tipo di operazione richiesta ed \'e8 un codice identificativo proprio delle \b API 9EURO-REG\b0  che vi offriamo, mentre ResultCode e ReasonCode corrisponderanno ai codici di risposta del server \b EPP del Nic\b0 .\b\par
+\par
+\fs28 Elenco OpCode e Significati\par
+\par
+\b0\fs20 OpCode: \b 001 - Check Domain\fs28\par
+\b0\fs20 OpCode: \b 002 - Check EPPCode\fs28\par
+\b0\fs20 OpCode: \b 003 - Create Registrant Contact\fs28\par
+\b0\fs20 OpCode: \b 004 - Create Admin/Tech Contact\fs28\par
+\b0\fs20 OpCode: \b 005 - Create Domain\fs28\par
+\b0\fs20 OpCode: \b 006 - Delete Contact\fs28\par
+\b0\fs20 OpCode: \b 007 - Delete Domain\fs28\par
+\b0\fs20 OpCode: \b 008 - Renew Domain\fs28\par
+\b0\fs20 OpCode: \b 009 - Restore Domain\fs28\par
+\b0\fs20 OpCode: \b 010 - Transfert Domain Start\fs28\par
+\b0\fs20 OpCode: \b 011 - Transfert Domain Start With Registrant Change\par
+\b0 OpCode: \b 012 - Update Domain Name Server\fs28\par
+\par
+Comandi ed Operazioni Supportate\par
+\par
+\ul\fs24 001 - Check Domain\ulnone  \par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/check_domain.php\par
+\par
+\b0 Restituisce un messaggio di dominio Disponibile o dominio Registrato o non Registrabile, il messaggio \'e8 restituito nella variable Message, in caso di successo del comando, questo comando non consuma crediti.\par
+\par
+Questo comando pu\'f2 essere richiamato sia con un POST, sia con un GET (Redirect) alla pagina API.\par
+\par
+\ul\b Parametri necessari:\ulnone\b0\par
+\par
+\b DOMAIN=<nomedominio>\par
+\par
+\b0 Esempio:\b\par
+\par
+http://www.globospace.com/api-dot-it/check_domain.php?DOMAIN=<nomedominio>\par
+\fs24  \par
+\ul 002 - Check EPPCode\ulnone  \par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/check_eppcode.php\par
+\par
+\b0 Restituisce un messaggio contenente il codice EPP per trasferire il dominio, il messaggio \'e8 restituito nella variable Message, in caso di successo del comando, questo comando non consuma crediti.\par
+\par
+Questo comando pu\'f2 essere richiamato sia con un POST, sia con un GET (Redirect) alla pagina API.\par
+\par
+\ul\b Parametri necessari:\ulnone\b0\par
+\par
+\b DOMAIN=<nomedominio>\par
+\par
+\b0 Esempio:\b\par
+\par
+http://www.globospace.com/api-dot-it/check_eppcode.php?DOMAIN=<nomedominio>\par
+\fs24\par
+\ul\par
+003 - Create Registrant Contact\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/create_contact_registrant.php\fs24\par
+\par
+\ul\fs20 Parametri necessari:\ulnone\b0\par
+\par
+\b\f1 NAME\par
+ORG\par
+ADDRESS\par
+CITY\par
+STATE\par
+ZIPCODE\par
+COUNTRY\par
+TEL\par
+FAX\par
+EMAIL\par
+PUB\par
+NT\par
+TYPE\par
+CTYPE\par
+CF\f0\par
+\fs24\par
+\ul 004 - Create Admin/Tech Contact\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/create_contact_admin.php\fs24\par
+\par
+\ul\fs20 Parametri necessari:\ulnone\b0\par
+\par
+\b\f1 NAME\par
+ORG\par
+ADDRESS\par
+CITY\par
+STATE\par
+ZIPCODE\par
+COUNTRY\par
+TEL\par
+FAX\par
+EMAIL\par
+PUB\par
+NT\par
+TYPE\par
+CTYPE\par
+CF\f0\par
+\fs24\par
+\ul 005 - Create Domain\par
+\par
+\ulnone\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/create_domain.php\fs24\par
+\par
+\ul\fs20 Parametri necessari:\ulnone\b0\par
+\par
+\b\f1 DOMAIN\par
+YEARS\par
+IDREG\par
+IDADM\b0\par
+\b\f0\fs24\par
+\ul\fs20 Parametri opzionali:\ulnone\b0\par
+\par
+\b\f1 IDTECH\par
+NS1\par
+NS2\par
+\b0\f0\par
+I parametri opzionali se non specificati, saranno presi da quelli di default, indicati nel pannello generale \b globospace.com\b0\par
+\b\fs24\par
+\ul 006 - Delete Contact\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/delete_contact.php\fs24\par
+\par
+\ul\fs20 Parametri necessari:\ulnone\b0\par
+\par
+\b\f1 CONTACT\b0\par
+\f0\par
+\ul\b\fs24 007 - Delete Domain\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/delete_domain.php\par
+\b0\par
+\ul\b Parametri necessari:\ulnone\b0\par
+\par
+\b DOMAIN=<nomedominio>\par
+\par
+\ul\fs24 008 - Renew Domain\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/renew_domain.php\fs24\par
+\b0\fs20\par
+\ul\b Parametri necessari:\ulnone\b0\par
+\par
+\b DOMAIN=<nomedominio>\par
+\par
+\ul\fs24 009 - Restore Domain\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/restore_domain.php\fs24\par
+\b0\fs20\par
+\ul\b Parametri necessari:\ulnone\b0\par
+\par
+\b DOMAIN=<nomedominio>\par
+\par
+\ul\fs24 010 - Transfert Domain Start\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/transfert_start.php\fs24\par
+\b0\fs20\par
+\ul\b Parametri necessari:\ulnone\b0\par
+\par
+\b DOMAIN=<nomedominio>\par
+EPPCODE=<codice epp>\par
+\fs24\par
+\ul 011 - Transfert Domain Start With Registrant Change\ulnone\par
+\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/transfert_start_newreg.php\fs24\par
+\b0\fs20\par
+\b\f2 DOMAIN=<nomedominio>\par
+EPPCODE=<codice epp>\par
+IDREG=<nuovo registrant>\b0\par
+\b IDADM=<nuovo admin>\b0\f1\par
+\b\f0\fs24\par
+\ul 012 - Update Domain Name Server\ulnone\fs28\par
+\fs24\par
+\b0\fs20 Questa operazione richiamabile da questo indirizzo:\par
+\b http://www.globospace.com/api-dot-it/update_domain_dns.php\fs24\par
+\par
+\f2\fs20 DOMAIN=<nomedominio>\par
+NS1=<nuovo Name Server 1>\b0\par
+\b NS2=<nuovo Name Server 2>\par
+\b0\f0\par
+}
+ 
