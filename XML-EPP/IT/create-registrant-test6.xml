@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+<command>
+<create>
+<contact:create xmlns:contact="urn:ietf:params:xml:ns:contact-1.0" xsi:schemaLocation="urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">
+<contact:id>AA100</contact:id>
+<contact:postalInfo type="loc">
+<contact:name>Arnoldo Asso</contact:name>
+<contact:org>Arnoldo Asso</contact:org>
+<contact:addr>
+<contact:street>viale Garibaldi 23</contact:street>
+<contact:city>Pisa</contact:city>
+<contact:sp>PI</contact:sp>
+<contact:pc>56100</contact:pc>
+<contact:cc>IT</contact:cc>
+</contact:addr>
+</contact:postalInfo>
+<contact:voice>+39.050112112</contact:voice>
+<contact:fax>+39.050113113</contact:fax>
+<contact:email>arnoldo@asso.it</contact:email>
+<contact:authInfo>
+<contact:pw>1BAR-foo</contact:pw>
+</contact:authInfo>
+</contact:create>
+</create>
+<extension>
+<extcon:create xmlns:extcon="http://www.nic.it/ITNIC-EPP/extcon-1.0" xsi:schemaLocation="http://www.nic.it/ITNIC-EPP/extcon-1.0 extcon-1.0.xsd">
+<extcon:consentForPublishing>true</extcon:consentForPublishing>
+<extcon:registrant>
+<extcon:nationalityCode>IT</extcon:nationalityCode>
+<extcon:entityType>1</extcon:entityType>
+<extcon:regCode>SSARLD69A01G702E</extcon:regCode>
+</extcon:registrant>
+</extcon:create>
+</extension>
+<clTRID>[CLIENTTRID]</clTRID>
+
+      $STATE="LI";
+      $ZIPCODE="57100";
+      $COUNTRY="IT";
+      $TEL="+39.0586313131";
+      $FAX="+39.0586313313";
+      $EMAIL="rossi@bandabassotti.it";
+      $PUB="true";
+      $NT="IT";
+      $TYPE="2";
+      $CF="12345678910";
+      $PW="2fooBAR";
+
+<create>
+<contact:create xmlns:contact="urn:ietf:params:xml:ns:contact-1.0" xsi:schemaLocation="urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">
+<contact:id>BB100</contact:id>
+<contact:postalInfo type="loc">
+<contact:name>Carlo Verdi</contact:name>
+<contact:org>Banda Bassotti S.p.A.</contact:org>
+<contact:addr>
+<contact:street>via Deposito 23</contact:street>
+<contact:city>Livorno</contact:city>
+<contact:sp>[STATE]</contact:sp>
+<contact:pc>[ZIPCODE]</contact:pc>
+<contact:cc>[COUNTRY]</contact:cc>
+</contact:addr>
+</contact:postalInfo>
+<contact:voice>[TELEPHONE]</contact:voice>
+<contact:fax>[FAX]</contact:fax>
+<contact:email>[EMAIL]</contact:email>
+<contact:authInfo>
+<contact:pw>2fooBAR</contact:pw>
+</contact:authInfo>
+</contact:create>
+</create>
+<extension>
+<extcon:create xmlns:extcon="http://www.nic.it/ITNIC-EPP/extcon-1.0" xsi:schemaLocation="http://www.nic.it/ITNIC-EPP/extcon-1.0 extcon-1.0.xsd">
+<extcon:consentForPublishing>[PUBBLISH]</extcon:consentForPublishing>
+<extcon:registrant>
+<extcon:nationalityCode>[CONTACT-NT]</extcon:nationalityCode>
+<extcon:entityType>[CONTACT-TYPE]</extcon:entityType>
+<extcon:regCode>[CONTACT-CF]</extcon:regCode>
+</extcon:registrant>
+</extcon:create>
+</extension>
+<clTRID>[CLIENTTRID]</clTRID>
+
+<create>
+<contact:create xmlns:contact="urn:ietf:params:xml:ns:contact-1.0" xsi:schemaLocation="urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">
+<contact:id>[CONTACT-ID]</contact:id>
+<contact:postalInfo type="loc">
+<contact:name>[CONTACT-NAME]</contact:name>
+<contact:org>[CONTACT-ORG]</contact:org>
+<contact:addr>
+<contact:street>[ADDRESS]</contact:street>
+<contact:city>[CITY]</contact:city>
+<contact:sp>[STATE]</contact:sp>
+<contact:pc>[ZIPCODE]</contact:pc>
+<contact:cc>[COUNTRY]</contact:cc>
+</contact:addr>
+</contact:postalInfo>
+<contact:voice>[TELEPHONE]</contact:voice>
+<contact:fax>[FAX]</contact:fax>
+<contact:email>[EMAIL]</contact:email>
+<contact:authInfo>
+<contact:pw>[PASSWORD]</contact:pw>
+</contact:authInfo>
+</contact:create>
+</create>
+<extension>
+<extcon:create xmlns:extcon="http://www.nic.it/ITNIC-EPP/extcon-1.0" xsi:schemaLocation="http://www.nic.it/ITNIC-EPP/extcon-1.0 extcon-1.0.xsd">
+<extcon:consentForPublishing>[PUBBLISH]</extcon:consentForPublishing>
+<extcon:registrant>
+<extcon:nationalityCode>[CONTACT-NT]</extcon:nationalityCode>
+<extcon:entityType>[CONTACT-TYPE]</extcon:entityType>
+<extcon:regCode>[CONTACT-CF]</extcon:regCode>
+</extcon:registrant>
+</extcon:create>
+</extension>
+<clTRID>[CLIENTTRID]</clTRID>
+
+</command>
+</epp>
